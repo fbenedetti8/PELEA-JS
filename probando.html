@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8">
+	<title>pelea!</title>
+<style>
+	html {
+        height:100%;
+        width:100%;
+     }
+	body{
+		
+	background-image:url("img/fondo.jpg");
+	background-size:100% 100%;
+	
+	}
+	section{
+		display: flex;
+		justify-content: space-around;
+	}
+	img{
+		border: 2px solid black;
+	}
+	.disminuir{
+		opacity: 0.2;
+	}
+	 h1,.div {
+		font-style:italic;
+		font-weight:bold;
+		font-size:2em;
+		font-color:#ffffff;
+		font-family:'Helvetica','Verdana','Monaco',sans-serif;
+	}
+	.rojo{
+		border: 3px solid red;
+	}
+</style>
+</head>
+<body>
+	<h1 align="center">FIGTH</h1>
+	<section>
+		<div id="div1">
+			<img src="img/kirito.png" alt="kirito" height="200px" class="imagenK"><br>
+			<div id="vidaK" class="div"></div>
+			<img src="img/asuna.jpg" alt="curqandero" height="200px" width="150px" class="imagenA"><br>
+			<div id="vidaA" class="div"></div>
+
+		</div>
+		<div id="div2">
+			<img src="img/sawada.jpg" alt="sawada" height="200px" class="imagenS"><br>
+			<div id="vidaS" class="div"></div>
+			<img src="img/gokudera.jpg" alt="gokudera" height="200px" class="imagenG"><br>
+			<div id="vidaG" class="div"></div>
+		</div>
+	</section>
+	<script src="probando.js"></script>
+</body>
+</html>

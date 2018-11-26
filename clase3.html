@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8">
+	<title>Clase3</title>
+	<style type="text/css">
+		.error{
+			border:1px solid red;
+		}
+		.ok{
+			border:1px solid green;
+		}
+	</style>
+</head>
+<body>
+	<form action="http://www.educacionit.com" method="post" novalidate>
+		<input type="text" name="nombre" placeholder="Nombre"><br>
+		<input type="email" name="mail" placeholder="Mail"><br>
+		<button name="boton">Enviar!</button>
+	</form>
+
+	<script>
+	//DOM
+	const frm = document.querySelector("form")
+	const nombre = document.querySelector("input[name = nombre]")
+	const mail = document.querySelector("input[name = mail]")
+	//Eventos
+	frm.addEventListener("submit",enviar)
+	nombre.addEventListener("blur",validar)
+	mail.addEventListener("blur",validar)
+	//CallBacks
+	function enviar(e) {
+		e.preventDefault
+		if (validar({validar: nombre})&& ({validar: mail})) {
+			frm.submit()
+		}
+		
+	}
+	function validar(e){
+		e.target.classList.remove("erorr","ok");
+		if (e.target.value =="") {
+			e.target.classList.add("error")
+			return false
+
+		} else{
+			e.target.classList.add("ok")
+			return true
+		} 
+	}
+		
+	</script>
+</body>
+</html>
